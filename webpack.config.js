@@ -1,10 +1,10 @@
 const path = require('path');
-const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-    entry: './src/app.js',
+    entry: ['./src/app.js', './src/app.scss'],
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].bundle.js'
@@ -27,6 +27,26 @@ module.exports = {
                     },
                     'pug-html-loader'
                 ]
+            },
+            {
+                test: /\.(sa|sc|c)ss$/,
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader
+                    },
+                    {
+                        loader: "css-loader"
+                    },
+                    {
+                        loader: "postcss-loader"
+                    },
+                    {
+                        loader: "sass-loader",
+                        options: {
+                            implementation: require('sass')
+                        }
+                    }
+                ]
             }
         ]
     },
@@ -37,6 +57,9 @@ module.exports = {
                     from: './src/assets'
                 }
             ]
+        }),
+        new MiniCssExtractPlugin({
+            filename: 'bundle.css'
         }),
         new HtmlWebpackPlugin({
             filename: 'index.html',
