@@ -64,7 +64,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: './src/tpl/index.pug',
-            inject: "body"
+            inject: "body",
         })
     ]
 };
