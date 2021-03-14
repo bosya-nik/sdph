@@ -47,7 +47,31 @@ module.exports = {
                         }
                     }
                 ]
-            }
+            },
+            {
+                test: /\.(png|jpe?g|gif|webp|svg|bmp|ico)$/i,
+                exclude: /(public)/,
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            outputPath: "images",
+                            name: "[name].[ext]"
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.(woff2?|ttf|otf|eot)$/,
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            outputPath: "fonts"
+                        }
+                    }
+                ]
+            },
         ]
     },
     plugins: [
