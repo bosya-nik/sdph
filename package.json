@@ -2,9 +2,10 @@
   "name": "pug-boilerplate",
   "version": "1.0.0",
   "description": "Simple Webpack5 + Pug boilerplate",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "webpack serve --mode development",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,14 @@
   "bugs": {
     "url": "https://github.com/AvetisDN/pug-boilerplate/issues"
   },
-  "homepage": "https://github.com/AvetisDN/pug-boilerplate#readme"
+  "homepage": "https://github.com/AvetisDN/pug-boilerplate#readme",
+  "devDependencies": {
+    "copy-webpack-plugin": "^8.0.0",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.1",
+    "pug-html-loader": "^1.1.5",
+    "webpack": "^5.25.0",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  }
 }
