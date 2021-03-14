@@ -9,9 +9,9 @@ Simple Webpack5 + Pug boilerplate
 ### 2. Install dependencies
 <code>npm i</code>
 ### 3. Scripts
-#####3.1. Dev Server
+####3.1. Dev Server
 <code>npm run serve</code>
-#####3.2. Build a distribution
+####3.2. Build a distribution
 <code>npm run buil</code>
  
  
