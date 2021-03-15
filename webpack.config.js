@@ -12,7 +12,9 @@ module.exports = {
     devServer: {
         open: true,
         hot: true,
-        port: 8088
+        port: 3333,
+        contentBase: path.join(__dirname, 'src'),
+        watchContentBase: true
     },
     module: {
         rules: [
@@ -25,7 +27,7 @@ module.exports = {
                             sources: false
                         }
                     },
-                    'pug-html-loader'
+                    'pug-plain-loader'
                 ]
             },
             {
