@@ -1,0 +1,96 @@
+.header {
+    background: #FBFEFB;
+    padding: 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 9998;
+    &-container {
+
+        max-width: 1400px;
+        margin: 0 auto;
+        color: $text;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &_logo a {
+            display: flex;
+            align-items: center;
+            color: $text;
+            font-size: 2rem;
+            text-decoration: none;
+        }
+    }
+    &-navigation {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        &_menu a {
+            font-size: 1rem;
+            color: $text;
+            text-decoration: none;
+            display: inline-block;
+            padding: .5rem 1rem;
+        }
+    }
+    &-burger {
+        display: none;
+        a {
+            color: $text;
+            font-size: 32px;
+            display: block;
+            padding: 8px 6px;
+        }
+    }
+    &-shadow {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1173px) {
+    .header {
+        &-navigation {
+            position: fixed;
+            width: 75%;
+            max-width: 380px;
+            height: 100vh;
+            top: 0;
+            left: -380px;
+            background-color: $primary;
+            align-items: flex-start;
+            padding: 30px;
+            box-sizing: border-box;
+            z-index: 9999;
+            transition: 400ms ease;
+            &_menu {
+                display: flex;
+                flex-direction: column;
+                padding-top: 30px;
+                a {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        &-burger {
+            display: block;
+        }
+        &-shadow {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0,0,0,0);
+            z-index: -1;
+            transition: 400ms ease;
+        }
+    }
+    .header .header-container .header-navigation.show {
+        left: 0;
+    }
+    .header .header-container .header-shadow.show {
+        display: block;
+        background-color: rgba(0,0,0,0.7);
+        z-index: 1;
+    }
+}

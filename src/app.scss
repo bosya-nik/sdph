@@ -1,19 +1,15 @@
-@import "./styles/normalize";
+@import "/node_modules/@glidejs/glide/src/assets/sass/glide.core";
+@import "/node_modules/@glidejs/glide/src/assets/sass/glide.theme"; 
 
-body {
-  min-height: 100vh;
-  background: #f4f5f6 url('./assets/images/bg.jpg') center fixed no-repeat;
-  background-size: cover;
-}
+@import '/src/styles/vars';
+@import '/src/styles/reset';
+@import '/src/styles/mixins';
 
-* {
-  box-sizing: border-box;
-}
-
-.main {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+@import '/src/styles/header';
+@import '/src/styles/baner';
+@import '/src/styles/about2';
+@import '/src/styles/portfolio';
+@import '/src/styles/price';
+@import '/src/styles/additional';
+@import '/src/styles/review';
+@import '/src/styles/footer';

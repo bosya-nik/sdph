@@ -1,0 +1,98 @@
+.bcg{
+    background-image: url(/src/assets/images/bcg.png);
+}
+.about2 {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+
+    background-color: rgba(255, 255, 255, .8);
+    .title {
+        display: flex;
+        justify-content: center;
+        padding-top: 100px;
+        h1{
+            @include Title;
+            padding-bottom: 50px;
+        }
+    }
+    .person {
+        ul {
+            li {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                .text {
+                    text-align: center;
+                    max-width: 580px;
+                    padding: 2rem;
+                    @include Text;
+                    h1{
+                        padding: 1rem;
+                        @include UnTitle;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1173px) {
+    .bcg{
+        background-image: url(/src/assets/images/bcg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .about2 {
+        // width: 100vw;
+        height: auto;
+        margin: 0 auto;
+        padding-bottom: 2rem;
+        background-color: rgba(255, 255, 255, .8);
+        .title {
+            display: flex;
+            justify-content: center;
+            padding-top: 2rem;
+            h1{
+                @include Title;
+                padding-bottom: 50px;
+            }
+        }
+        .person {
+            ul {
+                li {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    img {
+                        width: 300px;
+                    }
+                    .text {
+                        @include phone-text;
+                        text-align: center;
+                        padding: 2rem;
+                    }
+                }
+            }
+        }
+    } 
+}
+
+@media screen and (max-width: 616px) {
+    .text {
+        h2 {
+            text-align: left;
+            max-width: 580px;
+            padding: 1rem;
+            @include phone-text;
+        }
+        h1{
+            padding: 1rem;
+            @include UnTitle;
+        }
+    }
+    .about2 {
+        padding-bottom: 0px;
+    }  
+}

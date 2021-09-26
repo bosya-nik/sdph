@@ -1,0 +1,119 @@
+.container {
+    max-width: 1440px;
+    height: 100%;
+    // max-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    padding: 1rem;
+    h1 {
+        @include Title;
+        margin-top: 100px;
+        margin-bottom: 50px;
+        
+    }
+    .accordion {
+        display: flex;
+        flex-direction: column;
+        &-item {
+            border: .5px solid rgb(248, 248, 248);
+            overflow: hidden;
+            transition: .3s ease;
+            &__header {
+                background-color: $primary;
+                padding: 1em;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                user-select: none;
+                cursor: pointer;
+                @include Text18;
+                &::after {
+                    display: block;
+                    transition: .3s ease;
+                    content: '+';
+                }
+            }
+            &__content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: auto;
+                p {
+                    width: 70%;
+                    @include Text;
+                }
+            }
+        }
+    }
+}
+.accordion .accordion-item.opened .accordion-item__header::after {
+    transform: rotate(135deg);
+}
+.accordion .accordion-item .accordion-item__content {
+    padding: 1em 1em 2em;
+    transform-origin: 0% 0%;
+}
+
+
+@media screen and (max-width: 1170px) {
+    .container {
+        // height: auto;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1;
+        padding: 1rem;
+        h1 {
+            @include Title;
+            margin: 0;
+            margin-bottom: 50px;
+            
+        }
+        .accordion {
+            display: flex;
+            flex-direction: column;
+            &-item {
+                border: .5px solid rgb(248, 248, 248);
+                overflow: hidden;
+                transition: .3s ease;
+                &__header {
+                    background-color: $primary;
+                    padding: 1em;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    user-select: none;
+                    cursor: pointer;
+                    @include Text18;
+                    &::after {
+                        display: block;
+                        transition: .3s ease;
+                        content: '+';
+                    }
+                }
+                &__content {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    // height: auto;
+                    p {
+                        width: 100%;
+                        @include Text;
+                    }
+                }
+            }
+        }
+    }
+    .accordion .accordion-item.opened .accordion-item__header::after {
+        transform: rotate(135deg);
+    }
+    .accordion .accordion-item .accordion-item__content {
+        padding: 1em 1em 2em;
+        transform-origin: 0% 0%;
+    }
+}
