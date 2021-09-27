@@ -34,10 +34,10 @@
 
         color: rgb(255, 255, 255);
         .text {
-            width: 100vw;
+            max-width: 100vw;
             height: 90%;
             margin: 1rem;
-            color: #fff;
+            color: #FBFEFB;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
@@ -49,13 +49,30 @@
             }
             h1 {
                 font-size: 32px;
+                color: #FBFEFB;
             }
             h2 {
                 font-size: 24px;
+                color: #FBFEFB;
             }
         }
     }
 }
 
-
-
+@media screen and (max-width: 615px) {
+    .intro {
+        &__content {
+            .text {
+                color: #fff;
+                h1 {
+                    font-size: 2rem;
+                    padding: 0;
+                }
+                h2 {
+                    font-size: 1rem;
+                    padding: 0;
+                }
+            }
+        }
+    }
+}

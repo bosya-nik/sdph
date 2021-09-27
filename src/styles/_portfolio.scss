@@ -46,26 +46,16 @@
 
                 a {
                     padding: 0 .5rem;
-                    width: 336px;
-                    height: 336px;
-                    overflow: hidden;
                     img {
                         width: 336px;
                         height: 336px;
                         object-fit: cover;
-                        transition: all 300ms;
-                        &:hover {
-                            width: 350px;
-                            height: 350px;
-                            transition: all 300ms;
-                        }
                     }
                 }
             }
         }
     }
 }
-
 @media screen and (max-width: 480px) {
     .portfolio {
         h1 {
@@ -85,7 +75,7 @@
 @media screen and (max-width: 1170px) {
     .portfolio {
         h1 {
-            padding-top: 2rem;
+            padding-top: 80px;
         }
     }
 }

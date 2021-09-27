@@ -50,6 +50,9 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
-    "@glidejs/glide": "^3.4.1"
+    "@glidejs/glide": "^3.4.1",
+    "fslightbox": "*",
+    "img-lightbox": "^0.2.5",
+    "lightbox2": "^2.11.3"
   }
 }

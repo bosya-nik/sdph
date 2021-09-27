@@ -39,7 +39,10 @@ new Glide('.glideP', {
 }).mount()
 
 
-
+// lightbox.option({
+//     'resizeDuration': 200,
+//     'wrapAround': true
+// })
 
 
 //     window.onload = function() {
@@ -164,3 +167,5 @@ themeLinks.forEach(link => {
         })
     }
 })*/
+
+require('fslightbox'); 
